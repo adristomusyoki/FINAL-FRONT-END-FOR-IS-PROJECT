@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image.2.webp" alt="You Lose & We Find">  
+        </div>
+        <h1>You Lose & We Find</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="admin.html">Admin Panel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="admin" class="section">
+        <h1>Admin Dashboard</h1>
+        <div class="admin-content">
+            <div class="card">
+                <h3>Review Lost & Found Reports</h3>
+                <button onclick="approveReject()">Approve/Reject</button>
+            </div>
+            <div class="card">
+                <h3>Manage Item Claims</h3>
+                <button onclick="verifyClaims()">Verify Claims</button>
+            </div>
+            <div class="card">
+                <h3>Notify Users</h3>
+                <button onclick="sendAlerts()">Send Alerts</button>
+            </div>
+            <div class="card">
+                <h3>Manage User Accounts</h3>
+                <button onclick="manageUsers()">Manage Users</button>
+            </div>
+            <div class="card">
+                <h3>Manage System Configuration</h3>
+                <button onclick="manageConfiguration()">Manage Configuration</button>
+            </div>
+            <div class="card">
+                <h3>Update Item</h3>
+                <button onclick="updateItem()">Update Item</button>
+            </div>
+            <div class="card">
+                <h3>Monitor Log System Activity</h3>
+                <button onclick="monitorLog()">Monitor Log</button>
+            </div>
+            <div class="card">
+                <h3>Receive Real-Time Dashboard</h3>
+                <button onclick="realTimeDashboard()">Real-Time Dashboard</button>
+            </div>
+            <div class="card">
+                <h3>Receive Notification for Admin Action</h3>
+                <button onclick="adminNotification()">Admin Notification</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h2>Contact Us</h2>     
+        <p>Email: <a href="mailto:feedback@youlosewefind.com" class="contact-link">Compose For Feedback</a></p>
+        <p>Phone: <a href="tel:+254790661716" class="contact-link">Call For Assistance</a></p>
+        <p>&copy; 2025 You Lose & We Find. All rights reserved.</p>
+    </footer>
+    <script src="admin.js"></script>
+</body>
+</html>
