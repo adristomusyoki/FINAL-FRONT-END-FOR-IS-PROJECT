@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signupForm');
 
     signupForm.addEventListener('submit', (event) => {
@@ -25,4 +25,30 @@ document.addEventListener('DOMContentLoaded', () => {
         // Redirect to login page or another page
         window.location.href = 'login.html';
     });
+});*/
+// Initialize Supabase (Replace with your actual URL & key)
+const supabase = window.supabase.createClient(
+  import.meta.env.VITE_SUPABASE_URL, 
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+);
+
+document.getElementById("signupform").addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent form from refreshing
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Call Supabase Auth API for signup
+    const { user, error } = await supabase.auth.signUp({
+        email: email,
+        password: password,
+    });
+
+    if (error) {
+        console.error("Signup error:", error.message);
+        alert("Error: " + error.message);
+    } else {
+        console.log("Signup successful! User:", user);
+        alert("Signup successful! Check your email.");
+    }
 });
