@@ -32,7 +32,7 @@ const supabase = window.supabase.createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY
 );
 
-document.getElementById("signupform").addEventListener("submit", async (event) => {
+document.getElementById("signupForm").addEventListener("submit", async (event) => {
     event.preventDefault(); // Prevent form from refreshing
 
     const email = document.getElementById("email").value;
